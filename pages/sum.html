@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"</p>
+
+<input type="text" id="number1" placeholder="Enter Number 1"> <br/>
+<input type="text" id="number2" placeholder="Enter Number 2"> <br/>
+<button type="button" onclick="getResult()">
+Click me to get the Sum.</button> <br/>
+<input type="text" id="result" readonly>
+</body>
+</html>
+<script>
+    function getResult() {
+        var num1 = parseFloat(document.getElementById("number1").value);
+        var num2 = parseFloat(document.getElementById("number2").value);
+        var sum = num1 + num2;
+        var diff = num1 - num2;
+        var quo = num1 / num2;
+        var pro = num1 * num2;
+        var mod = num1 % num2;
+        document.getElementById("result").value = sum;
+        document.getElementById("demo").innerHTML = "The Sum is: " + sum + "<br/>" + "The Difference is: " + diff + "<br/>" + "The Quotient is: " + quo + "<br/>" + "The Product is: " + pro + "<br/>" + "The Modulus is: " + mod;
+    }
+</script>

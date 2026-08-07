@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <input type="hidden" name="id" value="23443234">
+  <table border="1">
+    <tr>
+      <td>Enter Last Name</td>
+      <td><input type="text" name="txtLastname" placeholder="Enter Last Name" value="Pontino" readonly/></td>
+    </tr>
+    <tr>
+      <td>Enter First Name</td>
+      <td><input type="text" name="txtFirstname" placeholder="Enter First Name" value="Jeremy" disabled/></td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td>
+          <input type="radio" name="sex" value="Male"> Male
+          <input type="radio" name="sex" value="Female"/> Female
+          <select name="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Course</td>
+      <td>
+          <input type="checkbox" name="course" value="BSIT"> BSIT
+          <input type="checkbox" name="course" value="BSA"/> BSA
+      </td>
+    </tr>
+    <tr>
+      <td>Birthdate</td>
+      <td>
+          <input type="date" name="birthdate" value="" />
+      </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+      <input type="email" name="email" value="" />
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+      <input type="password" name="password" value="" />
+      </td>
+    </tr>
+    <tr>
+      <td>Confirm Password</td>
+      <td>
+      <input type="confirm Password" name="confirmpassword" value="" />
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Submit"></td>
+    </tr>
+    
+    
+  </table>
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+
+</body>
+</html>
