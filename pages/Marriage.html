@@ -2,554 +2,607 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Certificate of Marriage Form (Municipal Form No. 97)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Marriage (Municipal Form No. 97)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light text-dark small">
 
-    <!-- Main Outer Wrapper Table (50% Width, Centered, with Border) -->
-    <table border="2" width="50%" align="center" cellpadding="12" cellspacing="0" bgcolor="#FFFFFF">
-        <tr>
-            <td>
+    <div class="container my-4 bg-white border border-2 border-dark p-4">
+        <form action="#" method="post">
+            
+            <!-- Header Section -->
+            <div class="row align-items-start mb-3">
+                <div class="col-3">
+                    <div class="lh-sm">
+                        Municipal Form No. 97<br>(Revised August 2016)
+                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <div>Republic of the Philippines</div>
+                    <div class="fw-bold">OFFICE OF THE CIVIL REGISTRAR GENERAL</div>
+                    <h5 class="fw-bold m-0">CERTIFICATE OF MARRIAGE</h5>
+                </div>
+                <div class="col-3 text-end">
+                    <div class="fst-italic lh-sm">
+                        (To be accomplished in quadruplicate using black ink)
+                    </div>
+                </div>
+            </div>
 
-                <form action="#" method="post">
-                    
-                    <!-- Header Section -->
-                    <table border="0" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td width="30%" valign="top">
-                                <font size="1">Municipal Form No. 97<br>(Revised August 2016)</font>
-                            </td>
-                            <td width="40%" align="center" valign="top">
-                                <font size="2">
-                                    Republic of the Philippines<br>
-                                    <b>OFFICE OF THE CIVIL REGISTRAR GENERAL</b><br>
-                                    <font size="3"><b>CERTIFICATE OF MARRIAGE</b></font>
-                                </font>
-                            </td>
-                            <td width="30%" align="right" valign="top">
-                                <font size="1"><i>(To be accomplished in quadruplicate using black ink)</i></font>
-                            </td>
-                        </tr>
-                    </table>
+            <!-- Location & Registry Info -->
+            <div class="border border-dark mb-3">
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-7 p-2 border-end border-dark d-flex align-items-center">
+                        <label class="fw-bold me-2 mb-0">Province:</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-5 p-2 d-flex align-items-center">
+                        <label class="fw-bold me-2 mb-0">Registry No.:</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-12 p-2 d-flex align-items-center">
+                        <label class="fw-bold me-2 mb-0">City/Municipality:</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
+            </div>
 
-                    <br>
+            <!-- Personal Particulars Grid Section -->
+            <div class="border border-dark mb-3">
+                <!-- Header -->
+                <div class="row g-0 bg-secondary-subtle border-bottom border-dark fw-bold text-center p-1">
+                    <div class="col-3 border-end border-dark">DETAILS</div>
+                    <div class="col-4 border-end border-dark">HUSBAND</div>
+                    <div class="col-5">WIFE</div>
+                </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td width="60%">
-                                <b>Province:</b> <input type="text" size="20">
-                            </td>
-                            <td width="40%">
-                                <b>Registry No.:</b> <input type="text" size="10">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <b>City/Municipality:</b> <input type="text" size="30">
-                            </td>
-                        </tr>
-                    </table>
+                <!-- 1. Names -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">1. Name of Contracting Parties</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <label class="form-label mb-0">First Name</label>
+                        <input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label>
+                        <input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-5 p-2">
+                        <label class="form-label mb-0">First Name</label>
+                        <input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label>
+                        <input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
 
-                    <br>
+                <!-- 2. Date of Birth / Age -->
+                <div class="row g-0 border-bottom border-dark align-items-center">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">2. Date of Birth / Age</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <div class="row g-1 text-center">
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Date</div></div>
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Month</div></div>
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Year</div></div>
+                            <div class="col-3"><input type="number" class="form-control form-control-sm"><div class="lh-1">Age</div></div>
+                        </div>
+                    </div>
+                    <div class="col-5 p-2">
+                        <div class="row g-1 text-center">
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Date</div></div>
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Month</div></div>
+                            <div class="col-3"><input type="text" class="form-control form-control-sm"><div class="lh-1">Year</div></div>
+                            <div class="col-3"><input type="number" class="form-control form-control-sm"><div class="lh-1">Age</div></div>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Main Personal Particulars Section -->
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr bgcolor="#E0E0E0">
-                            <th width="25%" align="center">DETAILS</th>
-                            <th width="37.5%" align="center">HUSBAND</th>
-                            <th width="37.5%" align="center">WIFE</th>
-                        </tr>
-                        
-                        <!-- 1. Names -->
-                        <tr>
-                            <td><b>1. Name of Contracting Parties</b></td>
-                            <td>
-                                <font size="1">First Name</font><br>
-                                <input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br>
-                                <input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br>
-                                <input type="text" size="15">
-                            </td>
-                            <td>
-                                <font size="1">First Name</font><br>
-                                <input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br>
-                                <input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br>
-                                <input type="text" size="15">
-                            </td>
-                        </tr>
+                <!-- 3. Place of Birth -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">3. Place of Birth</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <div class="row g-1 text-center">
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">City</div></div>
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">Province</div></div>
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">Country</div></div>
+                        </div>
+                    </div>
+                    <div class="col-5 p-2">
+                        <div class="row g-1 text-center">
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">City</div></div>
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">Province</div></div>
+                            <div class="col-4"><input type="text" class="form-control form-control-sm"><div class="lh-1">Country</div></div>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- 2. Date of Birth / Age -->
-                        <tr>
-                            <td><b>2. Date of Birth / Age</b></td>
-                            <td>
-                                <table border="0" width="100%" cellpadding="1" cellspacing="0">
-                                    <tr>
-                                        <td align="center"><input type="text" size="1"><br><font size="1">(Date)</font></td>
-                                        <td align="center"><input type="text" size="4"><br><font size="1">(Month)</font></td>
-                                        <td align="center"><input type="text" size="2"><br><font size="1">(Year)</font></td>
-                                        <td align="center">|</td>
-                                        <td align="center"><input type="number" size="2"><br><font size="1">(Age)</font></td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table border="0" width="100%" cellpadding="1" cellspacing="0">
-                                    <tr>
-                                        <td align="center"><input type="text" size="1"><br><font size="1">(Date)</font></td>
-                                        <td align="center"><input type="text" size="4"><br><font size="1">(Month)</font></td>
-                                        <td align="center"><input type="text" size="2"><br><font size="1">(Year)</font></td>
-                                        <td align="center">|</td>
-                                        <td align="center"><input type="number" size="2"><br><font size="1">(Age)</font></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                <!-- 4. Sex & Citizenship -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">4a. Sex<br>4b. Citizenship</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <div>Sex: <strong>Male</strong></div>
+                        <div class="d-flex align-items-center mt-1">
+                            <span class="me-1">Citizenship:</span>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="col-5 p-2">
+                        <div>Sex: <strong>Female</strong></div>
+                        <div class="d-flex align-items-center mt-1">
+                            <span class="me-1">Citizenship:</span>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- 3. Place of Birth -->
-                        <tr>
-                            <td><b>3. Place of Birth</b></td>
-                            <td>
-                                <table border="0" width="100%" cellpadding="1" cellspacing="0">
-                                    <tr>
-                                        <td><input type="text" size="5"><br><font size="1">(City)</font></td>
-                                        <td><input type="text" size="5"><br><font size="1">(Province)</font></td>
-                                        <td><input type="text" size="5"><br><font size="1">(Country)</font></td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table border="0" width="100%" cellpadding="1" cellspacing="0">
-                                    <tr>
-                                        <td><input type="text" size="5"><br><font size="1">(City)</font></td>
-                                        <td><input type="text" size="5"><br><font size="1">(Province)</font></td>
-                                        <td><input type="text" size="5"><br><font size="1">(Country)</font></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                <!-- 5. Residence -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">5. Residence</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <textarea class="form-control form-control-sm" rows="2" placeholder="Address"></textarea>
+                    </div>
+                    <div class="col-5 p-2">
+                        <textarea class="form-control form-control-sm" rows="2" placeholder="Address"></textarea>
+                    </div>
+                </div>
 
-                        <!-- 4. Sex & Citizenship -->
-                        <tr>
-                            <td><b>4a. Sex<br>4b. Citizenship</b></td>
-                            <td>
-                                Sex: <b>Male</b><br>
-                                Citizenship: <input type="text" size="10">
-                            </td>
-                            <td>
-                                Sex: <b>Female</b><br>
-                                Citizenship: <input type="text" size="10">
-                            </td>
-                        </tr>
+                <!-- 6. Religion -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">6. Religion</div>
+                    <div class="col-4 p-2 border-end border-dark"><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-5 p-2"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                        <!-- 5. Residence -->
-                        <tr>
-                            <td><b>5. Residence</b></td>
-                            <td><textarea rows="2" cols="15" placeholder="Address"></textarea></td>
-                            <td><textarea rows="2" cols="15" placeholder="Address"></textarea></td>
-                        </tr>
+                <!-- 7. Civil Status -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">7. Civil Status</div>
+                    <div class="col-4 p-2 border-end border-dark"><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-5 p-2"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>6. Religion</b></td>
-                            <td><input type="text" size="15"></td>
-                            <td><input type="text" size="15"></td>
-                        </tr>
+                <!-- 8. Name of Father -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">8. Name of Father</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-5 p-2">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>7. Civil Status</b></td>
-                            <td><input type="text" size="15"></td>
-                            <td><input type="text" size="15"></td>
-                        </tr>
+                <!-- 9. Citizenship (Father) -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">9. Citizenship (Father)</div>
+                    <div class="col-4 p-2 border-end border-dark"><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-5 p-2"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>8. Name of Father</b></td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                        </tr>
+                <!-- 10. Maiden Name of Mother -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">10. Maiden Name of Mother</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-5 p-2">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>9. Citizenship (Father)</b></td>
-                            <td><input type="text" size="15"></td>
-                            <td><input type="text" size="15"></td>
-                        </tr>
+                <!-- 11. Citizenship (Mother) -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">11. Citizenship (Mother)</div>
+                    <div class="col-4 p-2 border-end border-dark"><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-5 p-2"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>10. Maiden Name of Mother</b></td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                        </tr>
+                <!-- 12. Consent / Advice -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">12. Consent / Advice</div>
+                    <div class="col-4 p-2 border-end border-dark">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-5 p-2">
+                        <label class="form-label mb-0">First Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Middle Name</label><input type="text" class="form-control form-control-sm mb-1">
+                        <label class="form-label mb-0">Last Name</label><input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>11. Citizenship (Mother)</b></td>
-                            <td><input type="text" size="15"></td>
-                            <td><input type="text" size="15"></td>
-                        </tr>
+                <!-- 13. Relationship -->
+                <div class="row g-0 border-bottom border-dark">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">13. Relationship</div>
+                    <div class="col-4 p-2 border-end border-dark"><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-5 p-2"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                        
-                        <tr>
-                            <td><b>12. Consent / Advice</b></td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                            <td>
-                                <font size="1">First Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Middle Name</font><br><input type="text" size="15"><br>
-                                <font size="1">Last Name</font><br><input type="text" size="15">
-                            </td>
-                        </tr>
+                <!-- 14. Residence -->
+                <div class="row g-0">
+                    <div class="col-3 p-2 border-end border-dark fw-bold">14. Residence</div>
+                    <div class="col-4 p-2 border-end border-dark"><textarea class="form-control form-control-sm" rows="2"></textarea></div>
+                    <div class="col-5 p-2"><textarea class="form-control form-control-sm" rows="2"></textarea></div>
+                </div>
+            </div>
 
-                        
-                        <tr>
-                            <td><b>13. Relationship</b></td>
-                            <td><input type="text" size="15"></td>
-                            <td><input type="text" size="15"></td>
-                        </tr>
+            <!-- Place, Date & Time of Marriage -->
+            <div class="border border-dark mb-3 p-2">
+                <div class="row g-3">
+                    <div class="col-md-6 border-end border-dark">
+                        <strong class="d-block mb-1">15. Place of Marriage:</strong>
+                        <textarea class="form-control form-control-sm mb-2" rows="2" placeholder="Office/Church"></textarea>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="me-2">City:</span>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="me-2">Province:</span>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <strong class="d-block mb-1">16. Date:</strong>
+                        <input type="date" class="form-control form-control-sm mb-3">
+                        <strong class="d-block mb-1">17. Time:</strong>
+                        <input type="time" class="form-control form-control-sm">
+                    </div>
+                </div>
+            </div>
 
-                        
-                        <tr>
-                            <td><b>14. Residence</b></td>
-                            <td><textarea rows="2" cols="15"></textarea></td>
-                            <td><textarea rows="2" cols="15"></textarea></td>
-                        </tr>
-                    </table>
+            <!-- 18. Certification of Contracting Parties -->
+            <div class="border border-dark mb-3 p-3">
+                <strong class="d-block mb-2">18. CERTIFICATION OF CONTRACTING PARTIES:</strong>
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    <span>THIS IS TO CERTIFY: That I,</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>and I,</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>both of legal age, take each other as husband and wife.</span>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="settlement_yes" name="marriage_settlement" value="yes">
+                        <label class="form-check-label" for="settlement_yes">have entered</label>
+                    </div> /
+                    <div class="form-check form-check-inline ms-1">
+                        <input class="form-check-input" type="checkbox" id="settlement_no" name="marriage_settlement" value="no">
+                        <label class="form-check-label" for="settlement_no">have not entered into a marriage settlement.</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <span>Signed this</span>
+                    <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                    <span>day of</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, 20</span>
+                    <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                </div>
+                
+                <div class="row text-center mt-4">
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>(Signature of Husband)</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>(Signature of Wife)</div>
+                    </div>
+                </div>
+            </div>
 
-                    <br>
+            <!-- 19. Certification of Solemnizing Officer -->
+            <div class="border border-dark mb-3 p-3">
+                <strong class="d-block mb-2">19. CERTIFICATION OF SOLEMNIZING OFFICER:</strong>
+                <p class="mb-2">THIS IS TO CERTIFY: THAT BEFORE ME, personally appeared the parties above-mentioned.</p>
+                <strong class="d-block mb-2">I CERTIFY FURTHER THAT:</strong>
+                
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="license_option" value="a" id="lic_a">
+                    <label class="form-check-label d-flex flex-wrap align-items-center gap-2" for="lic_a">
+                        <span>a. Marriage License No.</span>
+                        <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                        <span>issued on</span>
+                        <div class="col-3"><input type="date" class="form-control form-control-sm"></div>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="license_option" value="b" id="lic_b">
+                    <label class="form-check-label d-flex align-items-center gap-2" for="lic_b">
+                        <span>b. Article</span>
+                        <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                        <span>of E.O. 209 applies.</span>
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="license_option" value="c" id="lic_c">
+                    <label class="form-check-label" for="lic_c">c. Solemnized under P.D. 1083.</label>
+                </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td width="50%" valign="top">
-                                <b>15. Place of Marriage:</b><br>
-                                <textarea rows="2" cols="20" placeholder="Office/Church"></textarea><br><br>
-                                City: <input type="text" size="12"><br><br>
-                                Province: <input type="text" size="12">
-                            </td>
-                            <td width="50%" valign="top">
-                                <b>16. Date:</b><br>
-                                <input type="date"><br><br>
-                                <b>17. Time:</b><br>
-                                <input type="time">
-                            </td>
-                        </tr>
-                    </table>
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <label class="form-label mb-0">Name:</label>
+                        <input type="text" class="form-control form-control-sm mb-2">
+                        <label class="form-label mb-0">Position:</label>
+                        <input type="text" class="form-control form-control-sm mb-2">
+                        <label class="form-label mb-0">Religion/Reg No.:</label>
+                        <input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
+            </div>
 
-                    <br>
+            <!-- 20a. Witnesses -->
+            <div class="border border-dark mb-3 p-3">
+                <strong class="d-block mb-2">20a. WITNESSES:</strong>
+                <div class="row g-2">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <span class="me-2">1.</span><input type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <span class="me-2">2.</span><input type="text" class="form-control form-control-sm">
+                    </div>
+                </div>
+            </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <b>18. CERTIFICATION OF CONTRACTING PARTIES:</b><br><br>
-                                THIS IS TO CERTIFY: That I, <input type="text" size="12"> and I, <input type="text" size="12">, both of legal age, take each other as husband and wife.
-                                <br><br>
-                                <input type="checkbox" id="settlement_yes" name="marriage_settlement" value="yes"> <label for="settlement_yes">have entered</label> / 
-                                <input type="checkbox" id="settlement_no" name="marriage_settlement" value="no"> <label for="settlement_no">have not entered into a marriage settlement.</label>
-                                <br><br>
-                                Signed this <input type="text" size="2"> day of <input type="text" size="8">, 20<input type="text" size="2">.
-                                <br><br><br>
-                                
-                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            (Signature of Husband)
-                                        </td>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            (Signature of Wife)
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+            <!-- 21. Received By & 22. Registered By -->
+            <div class="border border-dark mb-3">
+                <div class="row g-0">
+                    <div class="col-md-6 border-end border-dark p-3">
+                        <strong class="d-block mb-2">21. RECEIVED BY:</strong>
+                        <div class="mb-2">Signature: <input type="text" class="form-control form-control-sm"></div>
+                        <div class="mb-2">Name: <input type="text" class="form-control form-control-sm"></div>
+                        <div>Date: <input type="date" class="form-control form-control-sm"></div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <strong class="d-block mb-2">22. REGISTERED BY:</strong>
+                        <div class="mb-2">Signature: <input type="text" class="form-control form-control-sm"></div>
+                        <div class="mb-2">Name: <input type="text" class="form-control form-control-sm"></div>
+                        <div>Date: <input type="date" class="form-control form-control-sm"></div>
+                    </div>
+                </div>
+            </div>
 
-                    <br>
+            <!-- Remarks & Office Box -->
+            <div class="border border-dark mb-3 p-3">
+                <strong class="d-block">REMARKS/ANNOTATIONS</strong>
+                <div class="text-secondary mb-2">(For LCRO/OCRG/Shari'a Circuit Registrar Use Only)</div>
+                <textarea class="form-control form-control-sm mb-3" rows="3"></textarea>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <b>19. CERTIFICATION OF SOLEMNIZING OFFICER:</b><br><br>
-                                THIS IS TO CERTIFY: THAT BEFORE ME, personally appeared the parties above-mentioned.<br><br>
-                                <b>I CERTIFY FURTHER THAT:</b><br>
-                                <input type="checkbox" name="license_option" value="a"> a. Marriage License No. <input type="text" size="10"> issued on <input type="date"><br>
-                                <input type="checkbox" name="license_option" value="b"> b. Article <input type="text" size="3"> of E.O. 209 applies.<br>
-                                <input type="checkbox" name="license_option" value="c"> c. Solemnized under P.D. 1083.
-                                <br><br>
-                                Name: <input type="text" size="20"><br><br>
-                                Position: <input type="text" size="20"><br><br>
-                                Religion/Reg No.: <input type="text" size="20">
-                            </td>
-                        </tr>
-                    </table>
+                <div class="p-2 border border-dark bg-light">
+                    <div class="fw-bold mb-2">TO BE FILLED-UP AT THE OFFICE OF THE CIVIL REGISTRAR</div>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        <div class="text-center"><span class="d-block">4bH</span><input type="text" class="form-control form-control-sm text-center" size="2"></div>
+                        <div class="text-center"><span class="d-block">4bW</span><input type="text" class="form-control form-control-sm text-center" size="2"></div>
+                        <div class="text-center"><span class="d-block">5H</span><input type="text" class="form-control form-control-sm text-center" size="4"></div>
+                        <div class="text-center"><span class="d-block">5W</span><input type="text" class="form-control form-control-sm text-center" size="4"></div>
+                        <div class="text-center"><span class="d-block">6H</span><input type="text" class="form-control form-control-sm text-center" size="2"></div>
+                        <div class="text-center"><span class="d-block">6W</span><input type="text" class="form-control form-control-sm text-center" size="2"></div>
+                        <div class="text-center"><span class="d-block">7H</span><input type="text" class="form-control form-control-sm text-center" size="1"></div>
+                        <div class="text-center"><span class="d-block">7W</span><input type="text" class="form-control form-control-sm text-center" size="1"></div>
+                    </div>
+                </div>
+            </div>
 
-                    <br>
+            <hr class="my-4 border-dark">
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <b>20a. WITNESSES:</b><br><br>
-                                1. <input type="text" size="20"><br>
-                                2. <input type="text" size="20">
-                            </td>
-                        </tr>
-                    </table>
+            <!-- 20b. Witnesses Continued -->
+            <div class="border border-dark mb-3 p-3">
+                <strong class="d-block mb-2">20b. WITNESSES (Continued):</strong>
+                <div class="row g-2">
+                    <div class="col-md-6 d-flex align-items-center"><span class="me-2">3.</span><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-md-6 d-flex align-items-center"><span class="me-2">4.</span><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-md-6 d-flex align-items-center"><span class="me-2">5.</span><input type="text" class="form-control form-control-sm"></div>
+                    <div class="col-md-6 d-flex align-items-center"><span class="me-2">6.</span><input type="text" class="form-control form-control-sm"></div>
+                </div>
+            </div>
 
-                    <br>
+            <!-- Affidavit of Solemnizing Officer -->
+            <div class="border border-dark mb-3 p-3">
+                <h5 class="text-center fw-bold mb-3">AFFIDAVIT OF SOLEMNIZING OFFICER</h5>
+                
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span>I,</span>
+                    <div class="col-4"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, Solemnizing Officer, solemnly swear:</span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span>1. Solemnized marriage between</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>and</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>;</span>
+                </div>
+                
+                <p class="mb-1">2. Circumstances:</p>
+                <div class="ps-3 mb-3">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="aff" value="a" id="aff_a"><label class="form-check-label" for="aff_a">a. Ascertained qualifications (Art. 34)</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="aff" value="b" id="aff_b"><label class="form-check-label" for="aff_b">b. Performed in <i>articulo mortis</i></label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="aff" value="c" id="aff_c"><label class="form-check-label" for="aff_c">c. Party physically unable to sign</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="aff" value="d" id="aff_d"><label class="form-check-label" for="aff_d">d. No means of transportation</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="aff" value="e" id="aff_e"><label class="form-check-label" for="aff_e">e. Muslim/Ethnic customs</label></div>
+                </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td width="50%" valign="top">
-                                <b>21. RECEIVED BY:</b><br><br>
-                                Signature: <input type="text" size="12"><br><br>
-                                Name: <input type="text" size="12"><br><br>
-                                Date: <input type="date">
-                            </td>
-                            <td width="50%" valign="top">
-                                <b>22. REGISTERED BY:</b><br><br>
-                                Signature: <input type="text" size="12"><br><br>
-                                Name: <input type="text" size="12"><br><br>
-                                Date: <input type="date">
-                            </td>
-                        </tr>
-                    </table>
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <span>Signed this</span>
+                    <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                    <span>day of</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, 20</span>
+                    <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                </div>
 
-                    <br>
+                <div class="row text-center mt-4">
+                    <div class="col-6 offset-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Solemnizing Officer Signature</div>
+                    </div>
+                </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <b>REMARKS/ANNOTATIONS</b> <font size="1">(For LCRO/OCRG/Shari'a Circuit Registrar Use Only)</font><br><br>
-                                <textarea rows="3" cols="50"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b><font size="1">TO BE FILLED-UP AT THE OFFICE OF THE CIVIL REGISTRAR</font></b><br><br>
-                                <table border="0" cellpadding="2" cellspacing="0">
-                                    <tr>
-                                        <td align="center"><font size="1">4bH</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">4bW</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">5H</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">5W</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">6H</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">6W</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">7H</font></td>
-                                        <td></td>
-                                        <td align="center"><font size="1">7W</font></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1"><input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1">
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <input type="text" size="1" maxlength="1">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="mt-4 pt-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <strong>SUBSCRIBED AND SWORN</strong>
+                        <span>to before me this</span>
+                        <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                        <span>day of</span>
+                        <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                        <span>, 20</span>
+                        <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                    </div>
+                </div>
 
-                    <hr>
+                <div class="row text-center mt-4">
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Administering Officer</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Title / Designation</div>
+                    </div>
+                </div>
+            </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <b>20b. WITNESSES (Continued):</b><br><br>
-                                3. <input type="text" size="20"><br>
-                                4. <input type="text" size="20"><br>
-                                5. <input type="text" size="20"><br>
-                                6. <input type="text" size="20">
-                            </td>
-                        </tr>
-                    </table>
+            <!-- Affidavit for Delayed Registration -->
+            <div class="border border-dark p-3">
+                <h5 class="text-center fw-bold mb-3">AFFIDAVIT FOR DELAYED REGISTRATION OF MARRIAGE</h5>
+                
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    <span>I,</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, of legal age, single/married/divorced/widow/widower, with residence address</span>
+                    <div class="col-4"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, after having duly sworn in accordance with law do hereby depose and say:</span>
+                </div>
 
-                    <br>
+                <p class="mb-1">1. That I am the applicant for the delayed registration of:</p>
+                <div class="ps-3 mb-2">
+                    <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" name="del_marriage" value="my" id="del_my">
+                        <label class="form-check-label d-flex flex-wrap align-items-center gap-2" for="del_my">
+                            <span>my marriage with</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>in</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>on</span>
+                            <div class="col-2"><input type="date" class="form-control form-control-sm"></div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="del_marriage" value="between" id="del_bet">
+                        <label class="form-check-label d-flex flex-wrap align-items-center gap-2" for="del_bet">
+                            <span>the marriage between</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>and</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>in</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>on</span>
+                            <div class="col-2"><input type="date" class="form-control form-control-sm"></div>
+                        </label>
+                    </div>
+                </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <center><h3>AFFIDAVIT OF SOLEMNIZING OFFICER</h3></center>
-                                
-                                I, <input type="text" size="15">, Solemnizing Officer, solemnly swear:<br><br>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span>2. That said marriage was solemnized by</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>under:</span>
+                </div>
+                <div class="d-flex flex-wrap gap-3 ps-3 mb-2">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="rites" value="religious" id="r_rel"><label class="form-check-label" for="r_rel">a. religious ceremony</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="rites" value="civil" id="r_civ"><label class="form-check-label" for="r_civ">b. civil ceremony</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="rites" value="muslim" id="r_mus"><label class="form-check-label" for="r_mus">c. Muslim rites</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" name="rites" value="tribal" id="r_tri"><label class="form-check-label" for="r_tri">d. tribal rites</label></div>
+                </div>
 
-                                1. Solemnized marriage between <input type="text" size="12"> and <input type="text" size="12">;<br><br>
+                <p class="mb-1">3. That the marriage was solemnized:</p>
+                <div class="ps-3 mb-2">
+                    <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" name="del_license" value="yes" id="lic_y">
+                        <label class="form-check-label d-flex flex-wrap align-items-center gap-2" for="lic_y">
+                            <span>a. with marriage license no.</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                            <span>issued on</span>
+                            <div class="col-2"><input type="date" class="form-control form-control-sm"></div>
+                            <span>at</span>
+                            <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="del_license" value="article" id="lic_art">
+                        <label class="form-check-label d-flex align-items-center gap-2" for="lic_art">
+                            <span>b. under Article</span>
+                            <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                            <span>(marriages of exceptional character);</span>
+                        </label>
+                    </div>
+                </div>
 
-                                2. Circumstances:<br>
-                                <input type="checkbox" name="aff" value="a"> a. Ascertained qualifications (Art. 34)<br>
-                                <input type="checkbox" name="aff" value="b"> b. Performed in <i>articulo mortis</i><br>
-                                <input type="checkbox" name="aff" value="c"> c. Party physically unable to sign<br>
-                                <input type="checkbox" name="aff" value="d"> d. No means of transportation<br>
-                                <input type="checkbox" name="aff" value="e"> e. Muslim/Ethnic customs<br><br>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span>4. Reason for the delay in registration:</span>
+                    <div class="col-6"><input type="text" class="form-control form-control-sm"></div>
+                </div>
 
-                                Signed this <input type="text" size="2"> day of <input type="text" size="8">, 20<input type="text" size="2">.<br><br><br>
+                <p class="mb-3">5. That I am executing this affidavit to attest to the truthfulness of the foregoing statements for all legal intents and purposes.</p>
 
-                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td width="50%"></td>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Solemnizing Officer Signature
-                                        </td>
-                                    </tr>
-                                </table>
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <span>In truth whereof, I have affixed my signature below this</span>
+                    <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                    <span>day of</span>
+                    <div class="col-3"><input type="text" class="form-control form-control-sm"></div>
+                    <span>, Philippines.</span>
+                </div>
 
-                                <br>
-                                <b>SUBSCRIBED AND SWORN</b> to before me this <input type="text" size="2"> day of <input type="text" size="8">, 20<input type="text" size="2">.<br><br><br>
+                <div class="row text-center mt-4">
+                    <div class="col-6 offset-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Signature Over Printed Name of Affiant</div>
+                    </div>
+                </div>
 
-                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Administering Officer
-                                        </td>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Title / Designation
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="mt-4 pt-2">
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <strong>SUBSCRIBED AND SWORN</strong>
+                        <span>to before me this</span>
+                        <div class="col-1"><input type="text" class="form-control form-control-sm text-center"></div>
+                        <span>day of</span>
+                        <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                        <span>, affiant who exhibited ID</span>
+                        <div class="col-2"><input type="text" class="form-control form-control-sm"></div>
+                    </div>
+                </div>
 
-                    <br>
+                <div class="row text-center mt-4">
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Signature of Administering Officer</div>
+                        <div class="border-top border-dark w-75 mx-auto mt-3"></div>
+                        <div>Name in Print</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="border-top border-dark w-75 mx-auto mt-4"></div>
+                        <div>Position / Title / Designation</div>
+                        <div class="border-top border-dark w-75 mx-auto mt-3"></div>
+                        <div>Address</div>
+                    </div>
+                </div>
+            </div>
 
-                    
-                    <table border="1" width="100%" cellpadding="4" cellspacing="0">
-                        <tr>
-                            <td>
-                                <center><h3>AFFIDAVIT FOR DELAYED REGISTRATION OF MARRIAGE</h3></center>
-                                
-                                I, <input type="text" size="20">, of legal age, single/married/divorced/widow/widower, with residence and postal address <input type="text" size="25">, after having duly sworn in accordance with law do hereby depose and say:<br><br>
-
-                                1. That I am the applicant for the delayed registration of:<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="del_marriage" value="my"> my marriage with <input type="text" size="12"> in <input type="text" size="10"> on <input type="text" size="8"><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="del_marriage" value="between"> the marriage between <input type="text" size="10"> and <input type="text" size="10"> in <input type="text" size="8"> on <input type="text" size="8"><br><br>
-
-                                2. That said marriage was solemnized by <input type="text" size="18"> (Solemnizing Officer's name) under:<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="rites" value="religious"> a. religious ceremony &nbsp;&nbsp;
-                                <input type="checkbox" name="rites" value="civil"> b. civil ceremony &nbsp;&nbsp;
-                                <input type="checkbox" name="rites" value="muslim"> c. Muslim rites &nbsp;&nbsp;
-                                <input type="checkbox" name="rites" value="tribal"> d. tribal rites<br><br>
-
-                                3. That the marriage was solemnized:<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="del_license" value="yes"> a. with marriage license no. <input type="text" size="8"> issued on <input type="text" size="8"> at <input type="text" size="8">;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="del_license" value="article"> b. under Article <input type="text" size="4"> (marriages of exceptional character);<br><br>
-
-                                4. (If the applicant is either the wife or husband) That I am a citizen of <input type="text" size="10"> and my spouse is a citizen of <input type="text" size="10">;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;(If the applicant is other than the wife or husband) That the wife is a citizen of <input type="text" size="10"> and the husband is a citizen of <input type="text" size="10">;<br><br>
-
-                                5. That the reason for the delay in registering our/their marriage is <input type="text" size="25">;<br><br>
-
-                                6. That I am executing this affidavit to attest to the truthfulness of the foregoing statements for all legal intents and purposes.<br><br>
-
-                                In truth whereof, I have affixed my signature below this <input type="text" size="2"> day of <input type="text" size="8">, <input type="text" size="2"> at <input type="text" size="12">, Philippines.<br><br><br>
-
-                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td width="50%"></td>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Signature Over Printed Name of Affiant
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <br>
-                                <b>SUBSCRIBED AND SWORN</b> to before me this <input type="text" size="2"> day of <input type="text" size="8">, <input type="text" size="2"> at <input type="text" size="12">, Philippines, affiant who exhibited to me his/her CTC/valid ID <input type="text" size="10"> issued on <input type="text" size="8"> at <input type="text" size="10">.<br><br><br>
-
-                                <table border="0" width="100%" cellpadding="2" cellspacing="0">
-                                    <tr>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Signature of the Administering Officer<br><br>
-                                            _______________________<br>
-                                            Name in Print
-                                        </td>
-                                        <td width="50%" align="center">
-                                            _______________________<br>
-                                            Position/ Title/ Designation<br><br>
-                                            _______________________<br>
-                                            Address
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-
-                </form>
-
-            </td>
-        </tr>
-    </table>
+        </form>
+    </div>
 
 </body>
 </html>
