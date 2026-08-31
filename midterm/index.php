@@ -1,85 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Records</title>
+    <title>Hello PHP</title>
 </head>
 <body>
-    <table>
+     <table border="1">
         <form action="index.php" method="POST">
-        <tr>
-            <td>Enter Code:</td>
-            <td><input type="text" name="code" placeholder="enter code"></td>
-        </tr>
-        <tr>
-            <td>Enter Description:</td>
-            <td><input type="text" name="description" placeholder="enter description"></td>
-        </tr>
-        <tr>
-            <td>Enter Address:</td>
-            <td><input type="text" name="address" placeholder="enter address"></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td><input type="submit" name="submit" onclick="return confirm('Are you sure you want to submit?');" value="Submit"></td>
-        </tr>
+            <tr>
+                <td>Enter Number 1:</td>
+                <td><input type="text" name="number1" placeholder="enter number 1"></td>
+            </tr>
+            <tr>
+                <td>Enter Number2:</td>
+                <td><input type="text" name="number2" placeholder="enter number 2"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
         </form>
     </table>
 
     <?php
-    $conn = mysqli_connect("localhost", "root", "", "jpcs");
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    } else {
-        echo "Connected successfully";
-    }
-
-    if (isset($_POST['submit'])) {
-        $code = mysqli_real_escape_string($conn, $_POST['code']);
-        $description = mysqli_real_escape_string($conn, $_POST['description']);
-        $address = mysqli_real_escape_string($conn, $_POST['address']);
-
-        $insert_sql = "INSERT INTO school (code, description, address)
-                        VALUES ('$code', '$description', '$address')";
-
-        if (mysqli_query($conn, $insert_sql)) {
-            echo "<p>Record added successfully.</p>";
-        } else {
-            echo "<p>Error adding record: " . mysqli_error($conn) . "</p>";
-        }
-    }
-
-    $sql = "SELECT
-                school.id,
-                school.`code` as school_code,
-                school.description as school_description,
-                school.address as school_address
-            FROM
-
-                school
-            ";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
+    if(isset($_POST['number1']) && isset($_POST['number2'])) {
+        $number1 = $_POST['number1'];
+        $number2 = $_POST['number2'];
+        $sum = $number1 + $number2;
+        $border = 1;
+        $difference = $number1 - $number2;
+        $product = $number1 * $number2;
+        $quotient = $number1 / $number2;
+        $modulo = $number1 % $number2;
+            
         echo "<table border='1'>";
-        echo "<tr>";
-        echo "<th>ID</th>";
-        echo "<th>Code</th>";
-        echo "<th>Description</th>";
-        echo "<th>Address</th>";
-        echo "</tr>";
-        while ($row = mysqli_fetch_object($result)) {
-            echo "<tr>";
-            echo "<td>" . $row->id. "</td>";
-            echo "<td>" . $row->school_code . "</td>";
-            echo "<td>" . $row->school_description. "</td>";
-            echo "<td>" . $row->school_address. "</td>";
-            echo "</tr>";
-        }
+        echo "<tr><td>Sum</td><td>$sum</td></tr>";
+        echo "<tr><td>Difference</td><td>$difference</td></tr>";
+        echo "<tr><td>Product</td><td>$product</td></tr>";
+        echo "<tr><td>Quotient</td><td>$quotient</td></tr>";
+        echo "<tr><td>Modulo</td><td>$modulo</td></tr>";
         echo "</table>";
-    } else {
-        echo "0 results";
     }
     ?>
 </body>
