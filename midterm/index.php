@@ -57,6 +57,7 @@
                 school.description as school_description,
                 school.address as school_address
             FROM
+
                 school
             ";
     $result = mysqli_query($conn, $sql);
