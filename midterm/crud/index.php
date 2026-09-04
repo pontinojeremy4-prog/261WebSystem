@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,49 +6,72 @@
     <title>Display Records</title>
 </head>
 <body>
+
     <table>
-        <form action="index.php" method="POST">
+        <form action="process.php" method="POST">
         <tr>
             <td>Enter Code:</td>
             <td><input type="text" name="code" placeholder="enter code"></td>
         </tr>
+
         <tr>
             <td>Enter Description:</td>
             <td><input type="text" name="description" placeholder="enter description"></td>
         </tr>
+
         <tr>
             <td>Enter Address:</td>
             <td><input type="text" name="address" placeholder="enter address"></td>
         </tr>
+
         <tr>
             <td>&nbsp;</td>
-            <td><input type="submit" name="submit" onclick="return confirm('Are you sure you want to submit?');" value="Submit"></td>
+            <td>
+                <input type="submit"
+                       name="submit"
+                       onclick="return confirm('Are you sure you want to submit?');"
+                       value="Submit">
+            </td>
         </tr>
         </form>
     </table>
 
+
+    
+    <br>
+
+    <form method="GET" action="index.php">
+
+        <input type="text"
+               name="search"
+               placeholder="Search Code"
+               value="<?php
+                   if (isset($_GET['search'])) {
+                       echo htmlspecialchars($_GET['search']);
+                   }
+               ?>">
+
+        <input type="submit" value="Search">
+
+
+        <a href="index.php">
+            <button type="button">Show All</button>
+        </a>
+
+    </form>
+
+
     <?php
-    $conn = mysqli_connect("localhost", "root", "", "jpcs");
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    } else {
-        echo "Connected successfully";
+
+    include 'connect.php';
+
+    
+    $search = "";
+
+    if (isset($_GET['search'])) {
+        $search = mysqli_real_escape_string($conn, $_GET['search']);
     }
 
-    if (isset($_POST['submit'])) {
-        $code = mysqli_real_escape_string($conn, $_POST['code']);
-        $description = mysqli_real_escape_string($conn, $_POST['description']);
-        $address = mysqli_real_escape_string($conn, $_POST['address']);
-
-        $insert_sql = "INSERT INTO school (code, description, address)
-                        VALUES ('$code', '$description', '$address')";
-
-        if (mysqli_query($conn, $insert_sql)) {
-            echo "<p>Record added successfully.</p>";
-        } else {
-            echo "<p>Error adding record: " . mysqli_error($conn) . "</p>";
-        }
-    }
 
     $sql = "SELECT
                 school.id,
@@ -57,24 +79,42 @@
                 school.description as school_description,
                 school.address as school_address
             FROM
+                school";
 
-                school
-            ";
+
+    if ($search != "") {
+        $sql .= " WHERE school.`code` LIKE '%$search%'";
+    }
+
+
     $result = mysqli_query($conn, $sql);
+
+
     if (mysqli_num_rows($result) > 0) {
+
         echo "<table border='1'>";
+
         echo "<tr>";
         echo "<th>ID</th>";
         echo "<th>Code</th>";
         echo "<th>Description</th>";
         echo "<th>Address</th>";
+        echo "<th>Action</th>";
         echo "</tr>";
+
+
         while ($row = mysqli_fetch_object($result)) {
             echo "<tr>";
-            echo "<td>" . $row->id. "</td>";
+            echo "<td>" . $row->id . "</td>";
             echo "<td>" . $row->school_code . "</td>";
-            echo "<td>" . $row->school_description. "</td>";
-            echo "<td>" . $row->school_address. "</td>";
+            echo "<td>" . $row->school_description . "</td>";
+            echo "<td>" . $row->school_address . "</td>";
+            echo "<td>
+                    <a href='process.php?action=delete&id=" . $row->id . "'
+                       onclick=\"return confirm('Are you sure you want to delete this record?');\">
+                       Delete
+                    </a>
+                  </td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -82,5 +122,6 @@
         echo "0 results";
     }
     ?>
+
 </body>
 </html>
