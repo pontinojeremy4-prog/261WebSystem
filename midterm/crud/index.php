@@ -99,11 +99,13 @@
         echo "<th>Code</th>";
         echo "<th>Description</th>";
         echo "<th>Address</th>";
-        echo "<th>Action</th>";
+        echo "<th colspan='2'>Action</th>";
         echo "</tr>";
 
 
         while ($row = mysqli_fetch_object($result)) {
+            echo "<form action='edit.php' method='POST' onsubmit=\"return confirm('Are you sure you want to edit this record?');\">";
+            echo "<input type='hidden' name='id' value='" . $row->id . "'>";
             echo "<tr>";
             echo "<td>" . $row->id . "</td>";
             echo "<td>" . $row->school_code . "</td>";
@@ -115,7 +117,9 @@
                        Delete
                     </a>
                   </td>";
+            echo "<td><input type='submit' name='subEdit' value='Edit'></td>";
             echo "</tr>";
+            echo "</form>";
         }
         echo "</table>";
     } else {

@@ -27,4 +27,20 @@ if (isset($_POST['submit'])) {
             echo "<p>Error deleting record: " . mysqli_error($conn) . "</p>";
         }
     }
+
+    if (isset($_POST['subUpdate'])) {
+        $id = mysqli_real_escape_string($conn, $_POST['id']);
+        $code = mysqli_real_escape_string($conn, $_POST['code']);
+        $description = mysqli_real_escape_string($conn, $_POST['description']);
+        $address = mysqli_real_escape_string($conn, $_POST['address']);
+
+        $update_sql = "UPDATE school SET code='$code', description='$description', address='$address' WHERE id='$id'";
+
+        if (mysqli_query($conn, $update_sql)) {
+            echo "<p>Record updated successfully.</p>";
+            header("Location: index.php");
+        } else {
+            echo "<p>Error updating record: " . mysqli_error($conn) . "</p>";
+        }
+    }
 ?>
